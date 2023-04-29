@@ -28,28 +28,40 @@ for i in range(5):
 
 	#레드팀 픽
 	image_name = readDataSheet.cell(row = (2 + i), column=7).value 
-	img = Image("Charater/" + image_name + ".png")
+	try:
+		img = Image("Charater/" + image_name + ".png")
+	except:
+		img = Image("Charater/NONE.png")
 	img.height = 60
 	img.width = 60
 	writeNewSheet.add_image(img, str(chr(74 + i))+str(11))
 
 	#블루팀 픽
 	image_name = readDataSheet.cell(row = (2 + i), column=3).value 
-	img = Image("Charater/" + image_name + ".png")
+	try:
+		img = Image("Charater/" + image_name + ".png")
+	except:
+		img = Image("Charater/NONE.png")
 	img.height = 60
 	img.width = 60
 	writeNewSheet.add_image(img, str(chr(68 + i))+str(11))
 
 	#레드팀 밴
 	image_name = readDataSheet.cell(row = (9 + i), column=3).value 
-	img = Image("Charater/" + image_name + ".png")
+	try:
+		img = Image("Charater/" + image_name + ".png")
+	except:
+		img = Image("Charater/NONE.png")
 	img.height = 60
 	img.width = 60
 	writeNewSheet.add_image(img, str(chr(74 + i))+str(6))
 
 	#블루팀 밴
 	image_name = readDataSheet.cell(row = (9 + i), column=2).value 
-	img = Image("Charater/" + image_name + ".png")
+	try:
+		img = Image("Charater/" + image_name + ".png")
+	except:
+		img = Image("Charater/NONE.png")
 	img.height = 60
 	img.width = 60
 	writeNewSheet.add_image(img, str(chr(68 + i))+str(6))
